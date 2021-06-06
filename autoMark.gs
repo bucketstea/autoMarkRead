@@ -11,7 +11,6 @@ function autoMarkRead() {
     msgs = GmailApp.getMessagesForThread(threads[i]);
     mailHeader.push([msgs[0].getTo(), msgs[0].getDate(), msgs[0].getSubject()]);
     threads[i].markRead();  // スレッドを既読にする
-    console.log('MarkRead')
   }
   console.log(mailHeader);
   return mailHeader;
